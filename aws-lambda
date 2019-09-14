@@ -1,0 +1,7 @@
+exports.handler = (event, context, callback) => {
+    //Getting a random integer between two values
+    let min = parseInt(event.min);
+    let max = parseInt(event.max);
+    let getRandomNumber = Math.floor(Math.random()*(max - min + 1)) + min;
+    callback (null, getRandomNumber);
+};   
